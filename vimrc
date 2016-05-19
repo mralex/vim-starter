@@ -1,4 +1,4 @@
-" Vundle {{€ý,
+" Vundle {{,
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
@@ -45,7 +45,7 @@ Plugin 'miripiruni/CSScomb-for-Vim'
 Plugin 'vim-scripts/wombat256.vim'
 
 call vundle#end()            " required
-" €ý,}}
+" ,}}
 
 " Plugin Settings {{{
 let g:windowswap_map_keys = 0 "prevent default bindings
