@@ -3,32 +3,31 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'kristijanhusak/vim-multiple-cursors'
-Plugin 'joom/vim-commentary'
-Plugin 'vim-scripts/Align'
 "Plugin 'valloric/MatchTagAlways'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'bling/vim-airline'
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
+Plugin 'gcmt/wildfire.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'wesQ3/vim-windowswap'
-Plugin 'tpope/vim-surround'
+Plugin 'joom/vim-commentary'
 Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'gcmt/wildfire.vim'
-Plugin 'Yggdroot/indentLine'
-Plugin 'rking/ag.vim'
+Plugin 'kristijanhusak/vim-multiple-cursors'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'qpkorr/vim-bufkill'
-
-Plugin 'editorconfig/editorconfig-vim'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Align'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'Yggdroot/indentLine'
 
 "Language Stuff
 Plugin 'pangloss/vim-javascript'
@@ -145,6 +144,7 @@ set scrolloff=5
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType help wincmd H
 " }}}
 
 " Some Useful Key Mappings {{{
