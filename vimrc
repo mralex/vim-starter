@@ -26,6 +26,8 @@ Plugin 'ervandew/supertab'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'rking/ag.vim'
+Plugin 'qpkorr/vim-buffkill'
 
 "Front End
 Plugin 'pangloss/vim-javascript'
@@ -110,9 +112,9 @@ set cindent
 set background=dark
 set expandtab
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set wildignore=*.pyc
 set ignorecase
 set smartcase
@@ -144,6 +146,10 @@ nmap <Space>x :let @/=''<CR>
 "split switch
 nnoremap <Leader>[ <C-W>w
 
+"buffer switch
+nnoremap <Leader>, :bp<CR>
+nnoremap <Leader>. :bn<CR>
+
 "System clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -173,5 +179,7 @@ map <Space>w <Plug>CamelCaseMotion_w
 map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
 " }}}
+
+nnoremap <C-T> :Ag<Space>
 
 colorscheme wombat256mod
