@@ -1,5 +1,4 @@
-" Vundle {{{
-
+" Vundle {{€ý,
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
@@ -12,7 +11,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'joom/vim-commentary'
 Plugin 'vim-scripts/Align'
-Plugin 'valloric/MatchTagAlways'
+"Plugin 'valloric/MatchTagAlways'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -27,10 +26,18 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'rking/ag.vim'
-Plugin 'qpkorr/vim-buffkill'
+Plugin 'qpkorr/vim-bufkill'
+
+Plugin 'editorconfig/editorconfig-vim'
+
+"Language Stuff
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'avakhov/vim-yaml'
+Plugin 'mxw/vim-jsx'
 
 "Front End
-Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'miripiruni/CSScomb-for-Vim'
 
@@ -38,7 +45,7 @@ Plugin 'miripiruni/CSScomb-for-Vim'
 Plugin 'vim-scripts/wombat256.vim'
 
 call vundle#end()            " required
-" }}}
+" €ý,}}
 
 " Plugin Settings {{{
 let g:windowswap_map_keys = 0 "prevent default bindings
@@ -89,6 +96,8 @@ endfunction
 autocmd WinEnter * call NERDTreeQuit()
 " }}}
 
+let g:jsx_ext_required = 0
+
 " General {{{
 
 set nocompatible
@@ -99,7 +108,11 @@ set linebreak
 set number
 
 syntax on
-set mouse=a
+"set mouse=a
+
+set ttyfast
+set ttyscroll=3
+set lazyredraw
 
 filetype plugin indent on
 
@@ -125,8 +138,10 @@ set history=1000
 set undolevels=1000
 set noswapfile
 set nobackup
+set nowritebackup
 set number
 set linespace=3
+set scrolloff=5
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -149,6 +164,9 @@ nnoremap <Leader>[ <C-W>w
 "buffer switch
 nnoremap <Leader>, :bp<CR>
 nnoremap <Leader>. :bn<CR>
+
+cnoreabbrev W w
+cnoreabbrev Q q
 
 "System clipboard
 vmap <Leader>y "+y
@@ -181,5 +199,8 @@ map <Space>e <Plug>CamelCaseMotion_e
 " }}}
 
 nnoremap <C-T> :Ag<Space>
+
+cnoreabbrev W w
+cnoreabbrev Q q
 
 colorscheme wombat256mod
