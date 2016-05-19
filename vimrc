@@ -202,5 +202,10 @@ nnoremap <C-T> :Ag<Space>
 
 cnoreabbrev W w
 cnoreabbrev Q q
+cnoreabbrev WQ wq
+cnoreabbrev Wq wq
+
+" Comment line in normal; lines in visual
+map <C-_> :Commentary<CR>
 
 colorscheme wombat256mod
