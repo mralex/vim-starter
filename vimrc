@@ -99,10 +99,14 @@ let g:jsx_ext_required = 0
 
 " General {{{
 
+set backspace=indent,eol,start
+
 set nocompatible
 filetype off
 set foldmethod=marker
 set linebreak
+
+set autoread
 
 set number
 
