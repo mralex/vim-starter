@@ -35,6 +35,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'avakhov/vim-yaml'
 Plugin 'mxw/vim-jsx'
+Plugin 'VimClojure'
 
 "Front End
 Plugin 'ap/vim-css-color'
