@@ -150,6 +150,8 @@ set scrolloff=5
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType help wincmd H
+
+au BufRead,BufNewFile *.cljs set filetype=clojure
 " }}}
 
 " Some Useful Key Mappings {{{
