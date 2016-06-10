@@ -31,6 +31,7 @@ Plugin 'Yggdroot/indentLine'
 
 "Language Stuff
 Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'avakhov/vim-yaml'
@@ -50,6 +51,7 @@ call vundle#end()            " required
 " Plugin Settings {{{
 let g:windowswap_map_keys = 0 "prevent default bindings
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:vim_json_syntax_conceal = 0
 " }}}
 
 " Airline {{{
